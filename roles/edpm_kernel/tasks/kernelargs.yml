@@ -136,7 +136,7 @@
   vars:
     modules:
       - name: vfio_iommu_type1
-  when: edpm_kernel_args is search("iommu")
+  when: "'iommu' in edpm_kernel_args"
 
 - name: Reboot block
   when:
